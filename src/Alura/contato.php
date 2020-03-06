@@ -22,5 +22,10 @@ class Contato
 
         return substr($this->email, 0, $posicaoArroba);
     }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
 }
 ?>

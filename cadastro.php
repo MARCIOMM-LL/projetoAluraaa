@@ -29,7 +29,7 @@ $contato = new Contato($_POST['email']);
     <li class="list-group-item">Usuário: <?php echo $contato->getUsuario(); ?></li class="list-group-item">
     <li class="list-group-item">Senha: </li class="list-group-item">
     <li class="list-group-item">Telefone: </li class="list-group-item">
-    <li class="list-group-item">Email: </li class="list-group-item">
+    <li class="list-group-item">Email: <?php echo $contato->getEmail(); ?></li class="list-group-item">
     <li class="list-group-item">Endereço: </li class="list-group-item">
 </ul>
 </div>
