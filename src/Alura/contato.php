@@ -10,6 +10,17 @@ class Contato
     public function __construct(string $email)
     {
         $this->email = $email;
+
+        if($this->validarEmail($email) !== false){
+            $this->email = $email;
+        }else{
+            $this->email = "Email inválido";
+        }
+    }
+
+    public function setEmail(string $email)
+    {
+        $this->email = $email;
     }
 
     public function getUsuario(): string
@@ -21,6 +32,11 @@ class Contato
         }
 
         return substr($this->email, 0, $posicaoArroba);
+    }
+
+    private function validarEmail(string $email)
+    {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 
     public function getEmail(): string
