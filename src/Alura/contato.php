@@ -12,9 +12,9 @@ class Contato
         $this->email = $email;
 
         if($this->validarEmail($email) !== false){
-            $this->email = $email;
+            $this->validarEmail($email);
         }else{
-            $this->email = "Email inválido";
+            $this->validarEmail("Email inválido");
         }
     }
 
