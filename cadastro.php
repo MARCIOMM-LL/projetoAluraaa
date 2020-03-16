@@ -6,7 +6,7 @@ use App\Alura\Contato;
 require 'autoload.php';
 
 $usuario = new Usuario($_POST['nome'], $_POST['senha']);
-$contato = new Contato($_POST['email'], $_POST['endereco'], $_POST['cep']);
+$contato = new Contato($_POST['email'], $_POST['endereco'], $_POST['cep'], $_POST['telefone']);
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $contato = new Contato($_POST['email'], $_POST['endereco'], $_POST['cep']);
     <li class="list-group-item">Sobrenome: <?php echo $usuario->getSobrenome(); ?></li class="list-group-item">
     <li class="list-group-item">Usuário: <?php echo $contato->getUsuario(); ?></li class="list-group-item">
     <li class="list-group-item">Senha: <?php echo $usuario->getSenha() ?></li class="list-group-item">
-    <li class="list-group-item">Telefone: </li class="list-group-item">
+    <li class="list-group-item">Telefone: <?php echo $contato->getTelefone() ?></li class="list-group-item">
     <li class="list-group-item">Email: <?php echo $contato->getEmail(); ?></li class="list-group-item">
     <li class="list-group-item">Endereço: <?php echo $contato->getEnderecoCep() ?></li class="list-group-item">
 </ul>
